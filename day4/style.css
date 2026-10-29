@@ -1,0 +1,53 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --input-bg: #f4f4f4;
+    --border-color: #cccccc;
+    --btn-bg: #e0e0e0;
+}
+
+body.dark {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --input-bg: #2a2a2a;
+    --border-color: #444444;
+    --btn-bg: #333333;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: sans-serif;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+textarea {
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 5px;
+}
+
+button {
+    background-color: var(--btn-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+/* Required classes for the character counter */
+.warning {
+    color: orange;
+}
+
+.over {
+    color: red;
+    font-weight: bold;
+}
