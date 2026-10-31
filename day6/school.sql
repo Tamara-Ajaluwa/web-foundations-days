@@ -22,22 +22,26 @@ CREATE TABLE enrolments (
 
 -- INSERT statements (4 students so one has no enrolments, 3 courses, 5 enrolments)
 INSERT INTO students (name, email) VALUES
-('Alice Johnson', 'alice@example.com'),
-('Bob Smith', 'bob@example.com'),
-('Charlie Brown', 'charlie@example.com'),
-('Diana Prince', 'diana@example.com');
+('Ayo Johnson', 'ayojohnson@example.com'),
+('Chima Ike', 'chimaike@example.com'),
+('Dave Kayode', 'davekayode@example.com'),
+('Lisa Kano', 'lisakano@example.com'),
+('Fatima Yusuf', 'fatimayusuf@example.com');
 
 INSERT INTO courses (title) VALUES
 ('Database Design'),
-('Web Development'),
+('Full Stack Development'),
+('Data Aanalytics'),
+('Software Engineering')
 ('Python Programming');
 
 INSERT INTO enrolments (student_id, course_id, grade) VALUES
 (1, 1, 'A'),
-(1, 2, 'B'),
-(2, 1, 'A'),
-(2, 3, 'C'),
-(3, 2, 'B');
+(1, 4, 'B'),
+(2, 5, 'A'),
+(5, 3, 'C'),
+(3, 2, 'B'),
+(4, 3, 'A');
 
 -- QUERIES
 -- 1. All courses for one student (by name)
@@ -45,7 +49,7 @@ SELECT courses.title
 FROM courses
 JOIN enrolments ON courses.course_id = enrolments.course_id
 JOIN students ON enrolments.student_id = students.student_id
-WHERE students.name = 'Alice Johnson';
+WHERE students.name = 'Ayo Johnson';
 
 -- 2. All students on one course
 SELECT students.name
