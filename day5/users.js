@@ -48,6 +48,9 @@ function renderUsers(list) {
         return;
     }
 
+    // NEW LINE ADDED HERE: Clear the status message when users are found
+    statusText.textContent = '';
+
     // Loop through the array of users
     list.forEach(user => {
         // Create a new list item for each user
